@@ -21,7 +21,15 @@ public class ControlPlataforma : MonoBehaviour
     {
         if (_plataformaIntervalo && collision.gameObject.CompareTag("Player"))
         {
+            _manageCenario2.Repetirplataformas();
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (_plataformaIntervalo && collision.gameObject.CompareTag("Player"))
+        {
             _manageCenario2.Repetirplataformalevel();
         }
+
     }
 }

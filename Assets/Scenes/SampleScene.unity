@@ -192,10 +192,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fa8509b8203f8949967fd2d7253359b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _plataformasinicial: {fileID: 849515122}
-  _plataformaintervalo:
+  _plataformasinicial:
+  - {fileID: 849515122}
   - {fileID: 1982254241}
   _plataformasVariadas: []
+  _plataformaintervalo: {fileID: 0}
   _paiPlataformas: {fileID: 287990526}
   _prefbPlataforma: {fileID: 6426874076064914081, guid: 74d644aa15045e04ba6df91addab86b1,
     type: 3}
@@ -273,7 +274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 178.2
+      value: 8.8
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 3}
       propertyPath: m_LocalPosition.y
