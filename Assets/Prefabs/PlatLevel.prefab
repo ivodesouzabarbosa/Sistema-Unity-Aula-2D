@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6426874076064914082}
   - component: {fileID: 6426874076064914083}
   - component: {fileID: 4003456590141985035}
-  - component: {fileID: -676986554811367882}
+  - component: {fileID: 8625122528667137386}
+  - component: {fileID: 8908071012416544892}
   m_Layer: 0
-  m_Name: Plataformas
+  m_Name: PlatLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d90a8faf6fb9540b084ef2825cc3a5dc, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -109,7 +110,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 0.625}
   m_EdgeRadius: 0
---- !u!114 &-676986554811367882
+--- !u!114 &8625122528667137386
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,3 +122,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86b30d18ade5260418369a6635af02fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _plataformaIntervalo: 1
+--- !u!58 &8908071012416544892
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6426874076064914081}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 2.0895705, y: -1.74}
+  serializedVersion: 2
+  m_Radius: 0.41043064
