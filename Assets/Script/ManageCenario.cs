@@ -5,6 +5,10 @@ using UnityEngine;
 public class ManageCenario : MonoBehaviour
 {
     public List<GameObject> _plataformasinicial = new List<GameObject>();
+    public List<GameObject> _plataformasL1 = new List<GameObject>();
+    public List<GameObject> _plataformasL2 = new List<GameObject>();
+    public List<GameObject> _plataformasL3 = new List<GameObject>();
+
     public List<GameObject> _plataformasVariadas = new List<GameObject>();
     public GameObject _plataformaintervalo;
     public Transform _paiPlataformas;
@@ -12,6 +16,8 @@ public class ManageCenario : MonoBehaviour
     public GameObject _prefbPlarLevel;
     public int _numeroPlaraformas;
     public float _valorDistplataforma;
+    public int _levelgame;
+    int _numbplatordem;
 
     void Start()
     {
@@ -38,13 +44,32 @@ public class ManageCenario : MonoBehaviour
     {
         for (int i = 0; i < _numerolocal; i++)
         {
+            switch (_levelgame)
+            {
+                case 0:
+                    //Console.WriteLine("Case 1");
+                    _prefbPlataforma = _plataformasL1[_numbplatordem];
+                    break;
+                case 1:
+                    _prefbPlataforma = _plataformasL2[_numbplatordem];
+                    break;
+                case 2:
+                    _prefbPlataforma = _plataformasL3[_numbplatordem];
+                    break;
+                default:
+                    //  Console.WriteLine("Default case");
+                    break;
+            }
+
+         
+
             GameObject _clone = Instantiate(_prefbPlataforma, _prefbPlataforma.transform.position, _prefbPlataforma.transform.rotation);// instanciar plataformas
             _plataformasVariadas.Add(_clone); //add na lista
             _clone.transform.SetParent(_paiPlataformas);// colocar como filho de outro gameobject
             _clone.transform.position = new Vector2(0, 0);// posicionar 
 
             if (i == 0) {// se for a primeira pegar posição da plataformas iniciais
-                _clone.transform.position = new Vector2(_plataformasinicial[i].transform.position.x + _valorDistplataforma, _plataformasinicial[0].transform.position.y);
+                _clone.transform.position = new Vector2(_plataformasinicial[1].transform.position.x + _valorDistplataforma, _plataformasinicial[0].transform.position.y);
             }
             else
             {
@@ -58,7 +83,14 @@ public class ManageCenario : MonoBehaviour
 
                 }
             }
+            _numbplatordem++;
+            if (_numbplatordem== _plataformasL1.Count)
+            {
+               // Debug.Log(_numbplatordem +" "+ _plataformasL1.Count);
+                _numbplatordem = 0;
+            }
         }
+       
     } 
 
     public void Repetirplataformas()
