@@ -1,0 +1,919 @@
+fileFormatVersion: 2
+guid: 94636432da6ae7c47b8174e86e53ce6a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7107069798477344694
+    second: desert_pack_0
+  - first:
+      213: -2858799272748581100
+    second: desert_pack_1
+  - first:
+      213: -1752926113606004432
+    second: desert_pack_2
+  - first:
+      213: -5578930347103373358
+    second: desert_pack_3
+  - first:
+      213: -2174683886986279971
+    second: desert_pack_4
+  - first:
+      213: -8217611726416930020
+    second: desert_pack_5
+  - first:
+      213: -3324106110123152924
+    second: desert_pack_6
+  - first:
+      213: -5493996219050531817
+    second: desert_pack_7
+  - first:
+      213: 6824224832489694047
+    second: desert_pack_8
+  - first:
+      213: -778225031975079374
+    second: desert_pack_9
+  - first:
+      213: 7378648237043875534
+    second: desert_pack_10
+  - first:
+      213: 8493409531536938137
+    second: desert_pack_11
+  - first:
+      213: 9190043920183576180
+    second: desert_pack_12
+  - first:
+      213: 6942990082940131157
+    second: desert_pack_13
+  - first:
+      213: 2337606275040925984
+    second: desert_pack_14
+  - first:
+      213: -6941886361491580617
+    second: desert_pack_15
+  - first:
+      213: -1788433464856315101
+    second: desert_pack_16
+  - first:
+      213: 6029151478589969935
+    second: desert_pack_17
+  - first:
+      213: -3238675986169536880
+    second: desert_pack_18
+  - first:
+      213: -7470870240016129112
+    second: desert_pack_19
+  - first:
+      213: 3620523394255780629
+    second: desert_pack_20
+  - first:
+      213: 5541340648352796078
+    second: desert_pack_21
+  - first:
+      213: -1018148331372510631
+    second: desert_pack_22
+  - first:
+      213: -3123366083552953281
+    second: desert_pack_23
+  - first:
+      213: 47677440754119512
+    second: desert_pack_24
+  - first:
+      213: -7916355563373936047
+    second: desert_pack_25
+  - first:
+      213: -5121986727245126008
+    second: desert_pack_26
+  - first:
+      213: -9011645237731550965
+    second: desert_pack_27
+  - first:
+      213: 9182737144856170774
+    second: desert_pack_28
+  - first:
+      213: 8118114211965661768
+    second: desert_pack_29
+  - first:
+      213: -3779648567680639979
+    second: desert_pack_30
+  - first:
+      213: -8003822014787948121
+    second: desert_pack_31
+  - first:
+      213: 2463596609251857219
+    second: desert_pack_32
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: desert_pack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 897
+        width: 265
+        height: 269
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf262ca35261a260800000000000000
+      internalID: 7107069798477344694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_1
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 899
+        width: 271
+        height: 269
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41ffcaf35318358d0800000000000000
+      internalID: -2858799272748581100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_2
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 899
+        width: 271
+        height: 269
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0311201bcfa5ca7e0800000000000000
+      internalID: -1752926113606004432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_3
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 899
+        width: 271
+        height: 269
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d7b1426868a392b0800000000000000
+      internalID: -5578930347103373358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_4
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 1032
+        width: 271
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd3ca69d688f1d1e0800000000000000
+      internalID: -2174683886986279971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_5
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 1032
+        width: 271
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1b95d07cad25fd80800000000000000
+      internalID: -8217611726416930020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_6
+      rect:
+        serializedVersion: 2
+        x: 1981
+        y: 1016
+        width: 271
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e9676eca176ed1d0800000000000000
+      internalID: -3324106110123152924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_7
+      rect:
+        serializedVersion: 2
+        x: 2265
+        y: 1016
+        width: 271
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71467261c8761c3b0800000000000000
+      internalID: -5493996219050531817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_8
+      rect:
+        serializedVersion: 2
+        x: 2548
+        y: 1011
+        width: 269
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f53a2ff245484be50800000000000000
+      internalID: 6824224832489694047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 616
+        width: 269
+        height: 271
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 232fec5e4703335f0800000000000000
+      internalID: -778225031975079374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_10
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 616
+        width: 271
+        height: 271
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eceff835a79366660800000000000000
+      internalID: 7378648237043875534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_11
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 616
+        width: 271
+        height: 271
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9941d2b08f6aed570800000000000000
+      internalID: 8493409531536938137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_12
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 616
+        width: 271
+        height: 271
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 476c7c42148998f70800000000000000
+      internalID: 9190043920183576180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_13
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 616
+        width: 271
+        height: 271
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 557d4b4e1b47a5060800000000000000
+      internalID: 6942990082940131157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_14
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 749
+        width: 271
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 029d980a588d07020800000000000000
+      internalID: 2337606275040925984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_15
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 749
+        width: 271
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7395a28422779af90800000000000000
+      internalID: -6941886361491580617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_16
+      rect:
+        serializedVersion: 2
+        x: 1981
+        y: 733
+        width: 271
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b71de3d353e27e0800000000000000
+      internalID: -1788433464856315101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_17
+      rect:
+        serializedVersion: 2
+        x: 2265
+        y: 733
+        width: 271
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0650627359dba350800000000000000
+      internalID: 6029151478589969935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 585
+        height: 402
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09ed6cd8959ed03d0800000000000000
+      internalID: -3238675986169536880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_19
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 283
+        width: 205
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a32dcc5913225890800000000000000
+      internalID: -7470870240016129112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_20
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 332
+        width: 271
+        height: 205
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b7b9f38deae3230800000000000000
+      internalID: 3620523394255780629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_21
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 332
+        width: 271
+        height: 271
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead408cd5fbc6ec40800000000000000
+      internalID: 5541340648352796078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_22
+      rect:
+        serializedVersion: 2
+        x: 1981
+        y: 332
+        width: 271
+        height: 205
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95282ebac7fced1f0800000000000000
+      internalID: -1018148331372510631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_23
+      rect:
+        serializedVersion: 2
+        x: 2265
+        y: 332
+        width: 271
+        height: 271
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3cb256681397a4d0800000000000000
+      internalID: -3123366083552953281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_24
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 0
+        width: 304
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 853f2f7316269a000800000000000000
+      internalID: 47677440754119512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_25
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 0
+        width: 285
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 152c869ce84732290800000000000000
+      internalID: -7916355563373936047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_26
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 0
+        width: 271
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 886e942853c0be8b0800000000000000
+      internalID: -5121986727245126008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_27
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 0
+        width: 270
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b099b2be66430f280800000000000000
+      internalID: -9011645237731550965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_28
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 0
+        width: 252
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 611dfe0f7c2af6f70800000000000000
+      internalID: 9182737144856170774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_29
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 0
+        width: 287
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 842734a3dd559a070800000000000000
+      internalID: 8118114211965661768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_30
+      rect:
+        serializedVersion: 2
+        x: 2288
+        y: 0
+        width: 248
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51cd49337adfb8bc0800000000000000
+      internalID: -3779648567680639979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_31
+      rect:
+        serializedVersion: 2
+        x: 2548
+        y: 0
+        width: 269
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a1fc1b9846bce090800000000000000
+      internalID: -8003822014787948121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_pack_32
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 902
+        width: 266
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 343505c3014703220800000000000000
+      internalID: 2463596609251857219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

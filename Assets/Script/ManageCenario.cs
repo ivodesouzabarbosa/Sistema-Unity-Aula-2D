@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CandyCoded;
 
 public class ManageCenario : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class ManageCenario : MonoBehaviour
 
     void Start()
     {
+
         Calculodistanciaplataforma();
         Gerarplataformas(_numeroPlaraformas);
     }
@@ -39,30 +41,33 @@ public class ManageCenario : MonoBehaviour
             _valorDistplataforma = _valorDistplataforma * -1;
         }
     }
-
-    void Gerarplataformas(int _numerolocal)// gera outras plataformas pela primeira vez
+    void PassLevel()
     {
+        switch (_levelgame)
+        {
+            case 0:
+                _prefbPlataforma = _plataformasL1[_numbplatordem];
+                break;
+            case 1:
+                _prefbPlataforma = _plataformasL2[_numbplatordem];
+                break;
+            case 2:
+                _prefbPlataforma = _plataformasL3[_numbplatordem];
+                break;
+            default:
+                break;
+        }
+    
+    }
+
+        void Gerarplataformas(int _numerolocal)// gera outras plataformas pela primeira vez
+        {
+        _plataformasL1 = _plataformasL1.Shuffle();
+      
+
         for (int i = 0; i < _numerolocal; i++)
         {
-            switch (_levelgame)
-            {
-                case 0:
-                    //Console.WriteLine("Case 1");
-                    _prefbPlataforma = _plataformasL1[_numbplatordem];
-                    break;
-                case 1:
-                    _prefbPlataforma = _plataformasL2[_numbplatordem];
-                    break;
-                case 2:
-                    _prefbPlataforma = _plataformasL3[_numbplatordem];
-                    break;
-                default:
-                    //  Console.WriteLine("Default case");
-                    break;
-            }
-
-         
-
+            PassLevel();
             GameObject _clone = Instantiate(_prefbPlataforma, _prefbPlataforma.transform.position, _prefbPlataforma.transform.rotation);// instanciar plataformas
             _plataformasVariadas.Add(_clone); //add na lista
             _clone.transform.SetParent(_paiPlataformas);// colocar como filho de outro gameobject
@@ -95,8 +100,11 @@ public class ManageCenario : MonoBehaviour
 
     public void Repetirplataformas()
     {
+
+        _plataformasL1 = _plataformasL1.Shuffle();
         for (int i = 0; i < _plataformasVariadas.Count; i++)
         {
+            PassLevel();
             if (i == 0)
             {// se for a primeira pegar posição da plataformas iniciais
                 _plataformasVariadas[i].transform.position = new Vector2(_plataformaintervalo.transform.position.x + _valorDistplataforma, _plataformasinicial[0].transform.position.y);
@@ -105,7 +113,14 @@ public class ManageCenario : MonoBehaviour
             {
                 _plataformasVariadas[i].transform.position = new Vector2(_plataformasVariadas[i - 1].transform.position.x + _valorDistplataforma, _plataformasinicial[0].transform.position.y);
             }
+            _numbplatordem++;
+            if (_numbplatordem == _plataformasL1.Count)
+            {
+    
+                _numbplatordem = 0;
+            }
         }
+
     }
     public void Repetirplataformalevel()
     {
