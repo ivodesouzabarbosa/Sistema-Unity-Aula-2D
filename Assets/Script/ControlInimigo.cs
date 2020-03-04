@@ -14,20 +14,17 @@ public class ControlInimigo : MonoBehaviour
     public Transform posfinalPatrulheiro;
     GameObject chao;
     bool chaocheck;
+    public Vector3 posIni;
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
+        posIni = GetComponent<Transform>().localPosition;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-   
-    
-
-
-
         if (patrulheiro)
         {
             Vector3 diff = posfinalPatrulheiro.position - posIniPatrulheiro.position;
@@ -47,9 +44,8 @@ public class ControlInimigo : MonoBehaviour
                 timer = timer - waitTime;
                 transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
                 velPatrulheiro = velPatrulheiro * -1;
+ 
             }
-
-
         }
     }
 
