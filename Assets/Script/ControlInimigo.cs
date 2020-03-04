@@ -9,16 +9,28 @@ public class ControlInimigo : MonoBehaviour
     public float waitTime;
     public float timer = 0.0f;
     public bool patrulheiro;
+    public bool voador;
+    public bool pulador;
     public float velPatrulheiro;
     public Transform posIniPatrulheiro;
     public Transform posfinalPatrulheiro;
     GameObject chao;
     bool chaocheck;
     public Vector3 posIni;
+    Vector3 scale;
+    Animator anim;
+    Collider2D cool;
+    bool pularC;
+    public float focaPulo;
+    public float tempoPulo;
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
         posIni = GetComponent<Transform>().localPosition;
+        anim = GetComponent<Animator>();
+        scale = transform.localScale;
+        anim = GetComponent<Animator>();
+        cool = GetComponent<Collider2D>();
 
     }
 
@@ -36,10 +48,10 @@ public class ControlInimigo : MonoBehaviour
                 chao = hit.collider.gameObject;
             }
 
-            rig.velocity = new Vector2(-velPatrulheiro, rig.velocity.y);
+            rig.velocity = new Vector2(velPatrulheiro, rig.velocity.y);
             timer += Time.deltaTime;
 
-            if (hit.collider.gameObject != chao|| timer > waitTime)
+            if ((hit.collider.gameObject != chao && !hit.collider.CompareTag("Player")) || timer > waitTime)
             {
                 timer = timer - waitTime;
                 transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
@@ -47,7 +59,81 @@ public class ControlInimigo : MonoBehaviour
  
             }
         }
+        else if (voador)
+        {
+         
+
+            rig.velocity = new Vector2(velPatrulheiro, rig.velocity.y);
+            timer += Time.deltaTime;
+
+            if (timer > waitTime)
+            {
+                timer = timer - waitTime;
+                transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+                velPatrulheiro = velPatrulheiro * -1;
+
+            }
+        }
+        else if (pulador)
+        {
+            Vector3 diff1 = posfinalPatrulheiro.position - posIniPatrulheiro.position;
+            RaycastHit2D hit1 = Physics2D.Raycast(posIniPatrulheiro.transform.position, diff1);
+            Debug.DrawRay(posIniPatrulheiro.transform.position, diff1, Color.green);
+            if (!chaocheck)
+            {
+                chaocheck = true;
+                chao = hit1.collider.gameObject;
+            }
+            if (!pularC)
+            {
+                rig.AddForce(transform.up * focaPulo);
+                pularC = true;
+              
+                Invoke("puclarCC", tempoPulo);
+
+
+            }
+            if (rig.velocity.y > 0.1f)
+            {
+                anim.SetBool("Sobe", true);
+                anim.SetBool("Desce", false);
+            }
+            else if (rig.velocity.y < -0.1f)
+            {
+                anim.SetBool("Sobe", false);
+                anim.SetBool("Desce", true);
+            }
+            else if (rig.velocity.y ==0)
+            {
+                anim.SetBool("Sobe", false);
+                anim.SetBool("Desce", false);
+            }
+        }
+        
     }
 
+
+     void puclarCC()
+    {
+        pularC = false;
+    }
+    public void PosIni()
+    {
+        transform.position = posIni;
+        rig.velocity = new Vector2(velPatrulheiro, rig.velocity.y);
+        timer = timer - waitTime;
+        StatusMorte(false);
+
+    }
+    public void StatusMorte(bool checkM)
+    {
+        anim.SetBool("Morte", checkM);
+        cool.enabled = !checkM;
+        if (voador)
+        {
+            rig.isKinematic = !checkM;
+            rig.velocity = new Vector2(rig.velocity.x, 0);
+        }
+    }
 
 }

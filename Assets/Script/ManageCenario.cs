@@ -62,7 +62,7 @@ public class ManageCenario : MonoBehaviour
 
         void Gerarplataformas(int _numerolocal)// gera outras plataformas pela primeira vez
         {
-        _plataformasL1 = _plataformasL1.Shuffle();
+        _plataformasVariadas = _plataformasVariadas.Shuffle();
       
 
         for (int i = 0; i < _numerolocal; i++)
@@ -101,7 +101,7 @@ public class ManageCenario : MonoBehaviour
     public void Repetirplataformas()
     {
 
-        _plataformasL1 = _plataformasL1.Shuffle();
+        _plataformasVariadas = _plataformasVariadas.Shuffle();
         for (int i = 0; i < _plataformasVariadas.Count; i++)
         {
             PassLevel();
