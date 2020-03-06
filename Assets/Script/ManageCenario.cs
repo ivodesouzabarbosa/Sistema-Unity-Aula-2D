@@ -9,6 +9,8 @@ public class ManageCenario : MonoBehaviour
     public List<GameObject> _plataformasL1 = new List<GameObject>();
     public List<GameObject> _plataformasL2 = new List<GameObject>();
     public List<GameObject> _plataformasL3 = new List<GameObject>();
+    public List<GameObject> inimigosL = new List<GameObject>();
+    public List<GameObject> PontosL = new List<GameObject>();
 
     public List<GameObject> _plataformasVariadas = new List<GameObject>();
     public GameObject _plataformaintervalo;
@@ -19,6 +21,11 @@ public class ManageCenario : MonoBehaviour
     public float _valorDistplataforma;
     public int _levelgame;
     int _numbplatordem;
+    public int QuantVidas;
+    public int QuantPontos;
+    public MenuControl MenuControl2;
+    public GameObject Player;
+
 
     void Start()
     {

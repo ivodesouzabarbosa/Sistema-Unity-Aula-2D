@@ -15,6 +15,7 @@ public class ControlInimigo : MonoBehaviour
     public Transform posIniPatrulheiro;
     public Transform posfinalPatrulheiro;
     GameObject chao;
+    ManageCenario _manageCenario2;
     bool chaocheck;
     public Vector3 posIni;
     Vector3 scale;
@@ -23,6 +24,9 @@ public class ControlInimigo : MonoBehaviour
     bool pularC;
     public float focaPulo;
     public float tempoPulo;
+    public Vector2 vel;
+    Vector3 diff;
+    RaycastHit2D hit;
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
@@ -31,6 +35,10 @@ public class ControlInimigo : MonoBehaviour
         scale = transform.localScale;
         anim = GetComponent<Animator>();
         cool = GetComponent<Collider2D>();
+        vel.x = velPatrulheiro;
+        vel.y = focaPulo;
+        _manageCenario2 = Camera.main.GetComponent<ManageCenario>();
+        _manageCenario2.inimigosL.Add(gameObject);
 
     }
 
@@ -39,8 +47,8 @@ public class ControlInimigo : MonoBehaviour
     {
         if (patrulheiro)
         {
-            Vector3 diff = posfinalPatrulheiro.position - posIniPatrulheiro.position;
-            RaycastHit2D hit = Physics2D.Raycast(posIniPatrulheiro.transform.position, diff);
+            diff = posfinalPatrulheiro.position - posIniPatrulheiro.position;
+            hit = Physics2D.Raycast(posIniPatrulheiro.transform.position, diff);
             Debug.DrawRay(posIniPatrulheiro.transform.position, diff, Color.green);
             if (!chaocheck)
             {
@@ -51,17 +59,14 @@ public class ControlInimigo : MonoBehaviour
             rig.velocity = new Vector2(velPatrulheiro, rig.velocity.y);
             timer += Time.deltaTime;
 
-            if ((hit.collider.gameObject != chao && !hit.collider.CompareTag("Player")) || timer > waitTime)
+            if ((hit.collider.gameObject != chao && !hit.collider.CompareTag("Level")) || timer > waitTime)
             {
-                timer = timer - waitTime;
-                transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
-                velPatrulheiro = velPatrulheiro * -1;
- 
+                MudarLado();
             }
         }
         else if (voador)
         {
-         
+
 
             rig.velocity = new Vector2(velPatrulheiro, rig.velocity.y);
             timer += Time.deltaTime;
@@ -88,7 +93,7 @@ public class ControlInimigo : MonoBehaviour
             {
                 rig.AddForce(transform.up * focaPulo);
                 pularC = true;
-              
+
                 Invoke("puclarCC", tempoPulo);
 
 
@@ -103,17 +108,17 @@ public class ControlInimigo : MonoBehaviour
                 anim.SetBool("Sobe", false);
                 anim.SetBool("Desce", true);
             }
-            else if (rig.velocity.y ==0)
+            else if (rig.velocity.y == 0)
             {
                 anim.SetBool("Sobe", false);
                 anim.SetBool("Desce", false);
             }
         }
-        
+
     }
 
 
-     void puclarCC()
+    void puclarCC()
     {
         pularC = false;
     }
@@ -134,6 +139,12 @@ public class ControlInimigo : MonoBehaviour
             rig.isKinematic = !checkM;
             rig.velocity = new Vector2(rig.velocity.x, 0);
         }
+    }
+
+    public void MudarLado(){
+        timer = timer - waitTime;
+        transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+        velPatrulheiro = velPatrulheiro * -1;
     }
 
 }
