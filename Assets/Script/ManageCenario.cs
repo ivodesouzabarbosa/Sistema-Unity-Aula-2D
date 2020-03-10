@@ -25,6 +25,7 @@ public class ManageCenario : MonoBehaviour
     public int QuantPontos;
     public MenuControl MenuControl2;
     public GameObject Player;
+    public Transform posTiro;
 
 
     void Start()
