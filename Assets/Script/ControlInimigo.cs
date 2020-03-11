@@ -27,6 +27,8 @@ public class ControlInimigo : MonoBehaviour
     public Vector2 vel;
     Vector3 diff;
     RaycastHit2D hit;
+
+    public HitPlayer hitplayer2;
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
@@ -59,7 +61,7 @@ public class ControlInimigo : MonoBehaviour
             rig.velocity = new Vector2(velPatrulheiro, rig.velocity.y);
             timer += Time.deltaTime;
 
-            if ((hit.collider.gameObject != chao && !hit.collider.CompareTag("Level")) || timer > waitTime)
+            if (cool.enabled && (hit.collider.gameObject != chao && !hit.collider.CompareTag("Level")) || timer > waitTime)
             {
                 MudarLado();
             }
@@ -124,7 +126,8 @@ public class ControlInimigo : MonoBehaviour
     }
     public void PosIni()
     {
-        transform.position = posIni;
+        transform.localPosition = posIni;
+        hitplayer2.gameObject.SetActive(true);
         rig.velocity = new Vector2(velPatrulheiro, rig.velocity.y);
         timer = timer - waitTime;
         StatusMorte(false);

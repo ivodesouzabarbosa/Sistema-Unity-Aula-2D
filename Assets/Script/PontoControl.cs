@@ -5,7 +5,7 @@ using UnityEngine;
 public class PontoControl : MonoBehaviour
 {
     // Start is called before the first frame update
-    ManageCenario _manageCenario2;
+    public ManageCenario _manageCenario2;
     void Start()
     {
         _manageCenario2 = Camera.main.GetComponent<ManageCenario>();
@@ -19,7 +19,7 @@ public class PontoControl : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             _manageCenario2.QuantPontos++;
-            _manageCenario2.MenuControl2.numPontos.text =""+ _manageCenario2.QuantPontos;
+            _manageCenario2.MenuControl2.numPontos.text =""+ _manageCenario2.QuantPontos.ToString("D3");
             sair();
         }
     }

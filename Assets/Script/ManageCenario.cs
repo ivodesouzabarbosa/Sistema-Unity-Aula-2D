@@ -32,7 +32,7 @@ public class ManageCenario : MonoBehaviour
     {
 
         Calculodistanciaplataforma();
-        Gerarplataformas(_numeroPlaraformas);
+        Gerarplataformas(_plataformasL1.Count);
     }
 
     // Update is called once per frame
@@ -68,7 +68,16 @@ public class ManageCenario : MonoBehaviour
     
     }
 
-        void Gerarplataformas(int _numerolocal)// gera outras plataformas pela primeira vez
+    void instacPlatLevel()
+    {
+        GameObject _clone = Instantiate(_prefbPlataforma, _prefbPlataforma.transform.position, _prefbPlataforma.transform.rotation);// instanciar plataformas
+        _plataformasVariadas.Add(_clone); //add na lista
+        _clone.transform.SetParent(_paiPlataformas);// colocar como filho de outro gameobject
+        _clone.transform.position = new Vector2(0, 0);// posicionar 
+
+    }
+
+    void Gerarplataformas(int _numerolocal)// gera outras plataformas pela primeira vez
         {
         _plataformasVariadas = _plataformasVariadas.Shuffle();
       
@@ -108,11 +117,47 @@ public class ManageCenario : MonoBehaviour
 
     public void Repetirplataformas()
     {
+        _levelgame++;
+        StartCoroutine(MenuControl2.OnLevel());
+
+        if (_levelgame == 1)
+        {
+            PassLevel();
+
+            for (int i = 0; i < _plataformasL2.Count; i++)
+            {
+                instacPlatLevel();
+            }
+        }
+        else if (_levelgame == 2)
+        {
+            PassLevel();
+
+            for (int i = 0; i < _plataformasL3.Count; i++)
+            {
+                instacPlatLevel();
+            }
+        }
+        else
+        {
+
+            int nn = _plataformasVariadas.Count;
+            for (int m = 0; m <nn; m++)
+            {
+             //   Debug.Log("Else _levelgame " + _levelgame);
+                GameObject _clone = Instantiate(_plataformasVariadas[m], _plataformasVariadas[m].transform.position, _plataformasVariadas[m].transform.rotation);// instanciar plataformas
+                _plataformasVariadas.Add(_clone); //add na lista
+                _clone.transform.SetParent(_paiPlataformas);// colocar como filho de outro gameobject
+                _clone.transform.position = new Vector2(0, 0);// posicionar 
+                 
+              //  Debug.Log("_plataformasVariadas.Count " + _plataformasVariadas.Count);
+            }
+            
+        }
 
         _plataformasVariadas = _plataformasVariadas.Shuffle();
         for (int i = 0; i < _plataformasVariadas.Count; i++)
         {
-            PassLevel();
             if (i == 0)
             {// se for a primeira pegar posição da plataformas iniciais
                 _plataformasVariadas[i].transform.position = new Vector2(_plataformaintervalo.transform.position.x + _valorDistplataforma, _plataformasinicial[0].transform.position.y);
@@ -129,9 +174,17 @@ public class ManageCenario : MonoBehaviour
             }
         }
 
+        for (int i = 0; i < inimigosL.Count; i++)
+        {
+            inimigosL[i].GetComponent<ControlInimigo>().PosIni();
+            inimigosL[i].GetComponent<ControlInimigo>().StatusMorte(false);
+        }
+
     }
     public void Repetirplataformalevel()
     {
+
         _plataformaintervalo.transform.position = new Vector2(_plataformasVariadas[_plataformasVariadas.Count-1].transform.position.x + _valorDistplataforma, _plataformasinicial[0].transform.position.y);
     }
+   
 }

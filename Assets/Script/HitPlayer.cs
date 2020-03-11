@@ -13,6 +13,11 @@ public class HitPlayer : MonoBehaviour
     void Start()
     {
         _manageCenario2 = Camera.main.GetComponent<ManageCenario>();
+        if (ControlInimigo2 != null)
+        {
+            ControlInimigo2.hitplayer2 = gameObject.GetComponent<HitPlayer>();
+        }
+       
 
     }
 
@@ -32,6 +37,14 @@ public class HitPlayer : MonoBehaviour
             }
             _manageCenario2.MenuControl2.posresp = PosrespwPref;          
             _manageCenario2.MenuControl2.ChamarMenuVida(true);
+
+
+        }
+        if (collision.gameObject.CompareTag("Bala") && ControlInimigo2 != null)
+        {
+
+            ControlInimigo2.StatusMorte(true);
+            gameObject.GetComponent<HitPlayer>().gameObject.SetActive(false);
 
         }
     }

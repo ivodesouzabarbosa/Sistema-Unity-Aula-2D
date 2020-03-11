@@ -8,6 +8,7 @@ TagManager:
   - plat1
   - plat2
   - Level
+  - Bala
   layers:
   - Default
   - TransparentFX

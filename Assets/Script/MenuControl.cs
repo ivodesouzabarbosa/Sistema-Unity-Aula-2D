@@ -23,6 +23,8 @@ public class MenuControl : MonoBehaviour
     public string NomeCenaMenu;
     public GameObject btMenu;
     public ControlInimigo ControlInimigo2;
+    public GameObject panelLevel;
+    public Text textLevel;
 
 
     void Start()
@@ -42,13 +44,18 @@ public class MenuControl : MonoBehaviour
         }
         menuChance[menuChance.Length-1].gameObject.SetActive(false);
         btMenu.SetActive(false);
-
+        panelLevel.transform.localScale = new Vector3(0, 0, 0);
+       
     }
 
     // Update is called once per frame
-    void Update()
+    public IEnumerator OnLevel()
     {
-        
+        panelLevel.transform.localScale = new Vector3(0, 0, 0);
+        textLevel.text = "Level " + _manageCenario2._levelgame;
+        panelLevel.transform.DOScale(1, 0.3f);
+        yield return new WaitForSeconds(2f);
+        panelLevel.transform.DOScale(0, 0.3f);
     }
     public void ChamarMenuVida(bool on)
     {
@@ -85,7 +92,7 @@ public class MenuControl : MonoBehaviour
             if (_manageCenario2.QuantVidas==0)
             {
                 numVidasPanel.text = "Game Over";
-                numPOnstosPanel.text = "Total de Pontos: " + numPontos;
+                numPOnstosPanel.text = "Total de Pontos: " + numPontos.text;
                 gameOver = true;
             }
             else if (_manageCenario2.QuantVidas == 1)

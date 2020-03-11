@@ -6,14 +6,14 @@ public class Firepref : MonoBehaviour
 {
     public float projetcSpeed;
     private Rigidbody2D rd;
-
+    public float speedDisable;
     void OnEnable()
     {
         if (rd != null)
         {
-            rd.velocity = Vector2.up * projetcSpeed;
+            rd.velocity = Vector2.right * projetcSpeed;
         }
-        Invoke("Disable", 2f);
+        Invoke("Disable", speedDisable);
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class Firepref : MonoBehaviour
     {
 
         rd =GetComponent<Rigidbody2D>();
-        rd.velocity = Vector2.up * projetcSpeed;
+        rd.velocity = Vector2.right * projetcSpeed;
     }
 
     void Disable()
